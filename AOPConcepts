@@ -1,0 +1,119 @@
+In AOP we have few basic concepts start with
+join point
+advice
+aspect
+point cut
+target
+proxy
+weaving
+
+ 1. Target = The Main Movie Scene
+This is the actual work happening
+
+In movie terms:
+The scene being shot (hero fighting, emotional dialogue, etc.)
+
+ Example:
+Hero delivering dialogue = Target
+
+
+ 2. Join Point = Every Moment in Shooting
+
+ Any point where something can happen
+ In movie terms:
+
+Actor enters
+Actor speaks
+Camera starts
+Scene ends
+
+ All these moments = Join Points
+
+
+ 3. Advice = Extra Actions Added
+
+ What extra thing you want to do
+
+ In movie terms:
+
+Add background music 🎵
+Add slow motion
+Add lighting effect
+Add sound effect
+
+ These are Advices
+
+ Example:
+
+Before hero speaks → play music
+After fight → add explosion sound
+
+
+ 4. Pointcut = Choosing Which Scene Gets Effects
+
+ Filter: where to apply advice
+
+ In movie terms:
+Director says:
+ “Only apply slow motion in fight scenes”
+
+ That selection = Pointcut
+
+
+ 5. Aspect = Full Direction Plan
+
+ Combination of:
+
+What to do (Advice)
+Where to do (Pointcut)
+
+In movie terms:
+A director’s instruction sheet
+
+ Example:
+ “In all fight scenes, add slow motion + loud music”
+
+That whole rule = Aspect
+
+
+6. Proxy = Assistant Director (Middleman)
+
+ Controls everything before reaching actual scene
+
+ In movie terms:
+Assistant director says:
+
+“Wait! Add music first”
+“Now shoot scene”
+“Add effects after”
+
+ Actor doesn’t know this is happening 
+
+ This middle control = Proxy
+
+
+ 7. Weaving = Final Editing Process
+
+ Combining effects with scenes
+
+ In movie terms:
+Editing room where:
+
+Scene + music + effects = final movie
+
+ That merging = Weaving
+
+
+
+ 8. Cross-Cutting Concerns = Common Movie Effects
+
+ Things used in many scenes
+
+ In movie terms:
+
+Background music
+Color grading
+Sound effects
+Lighting
+
+ These are used everywhere → so handled separately

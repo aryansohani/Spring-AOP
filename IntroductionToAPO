@@ -1,0 +1,10 @@
+What is AOP??
+-> So we have learnt about OOPS that is used to write the business logic but on other hand we have a compliment to it 
+that is AOP which is Aspect oriented programming that focuses more on aspects eg (logging , security , validation , exception handling)
+
+Why it is used?
+whenever you write a code so you have to maintain it you have to find error you have to add security and all stuff to maintain it monitor it find errors and debug it so these is neccesaary but if we write everything in a single code it will be a problem because it will make the code big and more unsorted 
+
+that where aop comes in pictures it seprated the cross cuttings concerns eg (logging , security , validation , exception handling) and manages it in different folder and later we can you annotation and keyword to use these methods
+
+we created AOP folder outside our project and now we will learn how these things works
