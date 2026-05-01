@@ -14,9 +14,9 @@ public class LoggingAspect {
 
     public static final Logger LOGGER= LoggerFactory.getLogger(LoggingAspect.class);
 
-    @Before("execution(* com.springaop.springaop.service.*.*(..))")
-    public void logMethodCall(JoinPoint joinPoint) {
-        LOGGER.info("Method called: " + joinPoint.getSignature().getName());
+    @Before("execution(* com.springaop.springaop.Service.*.*(..))")
+    public void logMethodCall() {
+        LOGGER.info("Method called ");
     }
 
 
