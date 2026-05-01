@@ -19,5 +19,10 @@ public class LoggingAspect {
         LOGGER.info("Method called ");
     }
 
+    @Before("execution(* com.springaop.springaop.Service.JobService.getAllJobs(..))")
+    public void logMethodcalling(JoinPoint jp) {
+        LOGGER.info("Success: " + jp.getSignature().getName());
+    }
+
 
 }
