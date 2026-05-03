@@ -17,12 +17,13 @@ public class jobController {
     // ✅ GET all jobs
     @GetMapping
     public List<JobPost> getAllJobs() {
+
         return service.getAllJobs();
     }
 
     // ✅ POST add job
     @PostMapping
-    public String addJob(@RequestBody JobPost job) {
+    public String addJob(@RequestBody JobPost job) throws InterruptedException {
         service.addJob(job);
         return "Job Added Successfully";
     }

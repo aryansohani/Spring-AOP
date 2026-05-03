@@ -15,8 +15,8 @@ public class JobService {
     @Autowired
     private JobRepo repo;
 
-    public void addJob(JobPost job) {
-        int c=10/0;
+    public void addJob(JobPost job) throws InterruptedException {
+        Thread.sleep(500);
         repo.addJob(job);   // ✅ FIXED
     }
 
