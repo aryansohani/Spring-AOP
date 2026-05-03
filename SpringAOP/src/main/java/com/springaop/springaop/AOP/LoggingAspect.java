@@ -1,6 +1,8 @@
 package com.springaop.springaop.AOP;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -19,10 +21,24 @@ public class LoggingAspect {
         LOGGER.info("Method called ");
     }
 
-    @Before("execution(* com.springaop.springaop.Service.JobService.getAllJobs(..))")
-    public void logMethodcalling(JoinPoint jp) {
-        LOGGER.info("Success: " + jp.getSignature().getName());
+//    @Before("execution(* com.springaop.springaop.Service.JobService.getAllJobs(..))")
+//    public void logMethodcalling(JoinPoint jp) {
+//        LOGGER.info("Success: " + jp.getSignature().getName());
+//    }
+
+    @After("execution(* com.springaop.springaop.Service.JobService.getAllJobs(..))")
+    public void logmethodafter(JoinPoint jp)
+    {
+        LOGGER.info("success :"+ jp.getSignature().getName());
     }
+
+    @AfterThrowing("execution(* com.springaop.springaop.Service.JobService.addJob(..))")
+    public void logexception(JoinPoint jp)
+    {
+        LOGGER.info("exception:"+jp.getSignature().getName());
+    }
+
+
 
 
 }

@@ -16,6 +16,7 @@ public class JobService {
     private JobRepo repo;
 
     public void addJob(JobPost job) {
+        int c=10/0;
         repo.addJob(job);   // ✅ FIXED
     }
 
