@@ -27,4 +27,10 @@ public class jobController {
         service.addJob(job);
         return "Job Added Successfully";
     }
+
+    @GetMapping("/{postid}")
+    public JobPost getjob(@PathVariable int postid)
+    {
+        return service.getjob(postid);
+    }
 }
